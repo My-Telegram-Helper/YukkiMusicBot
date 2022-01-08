@@ -79,7 +79,7 @@ async def initiate_bot():
         console.print("")
         status.update(status="[bold blue]Importation Completed!",)
     console.print(
-        "[bold green]Congrats!! Yukki Music Bot has started successfully!\n"
+        "[bold green]Congrats!! Nipun Music Bot has started successfully!\n"
     )
     try:
         await app.send_message(LOG_GROUP_ID,"<b>Congrats!! Music Bot has started successfully!</b>",)
@@ -201,7 +201,7 @@ async def initiate_bot():
             await LOG_CLIENT.join_chat("YukkiSupport")
         except:
             pass
-    console.print(f"└[red] Yukki Music Bot Boot Completed.")
+    console.print(f"└[red] Nipun Music Bot Boot Completed.")
     if STRING1 != "None":
         await pytgcalls1.start()
     if STRING2 != "None":
@@ -216,11 +216,12 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""Hello ,
-My name is {BOT_NAME}.
-I'm Telegram Voice Chat Audio with some useful features.
+home_text_pm = f"""Hey , 
+I Am Nipun Music Bot.
+I Can Play Audio & Video In Group Voise Chat .
+You Can Add Me To Your Group...
 
-All commands can be used with: / """
+Owner : @NipunDinujayaOffline   Assistant : NiupunDinujaya"""
 
 
 @app.on_message(filters.command("help") & filters.private)
@@ -235,7 +236,7 @@ async def start_command(_, message):
         name = (message.text.split(None, 1)[1]).lower()
         if name[0] == "s":
             sudoers = await get_sudoers()
-            text = "⭐️<u> **Owners:**</u>\n"
+            text = "⭐️<u> **Owners: @NiupunDinujaya**</u>\n"
             sex = 0
             for x in OWNER_ID:
                 try:
@@ -301,12 +302,13 @@ async def start_command(_, message):
 📎**Channel Link:** [Visit From Here]({channellink})
 🔗**Video Link:** [Link]({link})
 
-⚡️ __Searched Powered By {BOT_NAME}__"""
+⚡️ __Searched Powered By {BOT_NAME}__
+⚡️ __Bot By @NipunDinujayaOffline __"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch Youtube Video", url=f"{link}"
+                            text="🎥 Watch On Youtube ", url=f"{link}"
                         ),
                         InlineKeyboardButton(
                             text="🔄 Close", callback_data="close"
@@ -390,7 +392,7 @@ All commands can be used with: /
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Back", callback_data="help_back"
+                        text="⬅️ Back", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
                         text="🔄 Close", callback_data="close"
